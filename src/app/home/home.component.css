@@ -1,0 +1,24 @@
+.input-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container {
+    margin:0px 30% 0px 30% ;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: red;
+}
