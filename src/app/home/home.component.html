@@ -1,0 +1,47 @@
+<mat-card class="container">
+  
+    <h2 class="input-box">Authorization</h2>
+    <form *ngIf="!authFire.isLoggedIn()" class="example-form" [formGroup]="form" (ngSubmit)='signin()' novalidate>
+      <div class="input-box">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="Your email">
+          
+          <mat-error *ngIf="this.form.controls['email'].hasError('email') && !this.form.controls['email'].hasError('required')">
+            Please enter a valid email address!
+          </mat-error>
+
+         <mat-error *ngIf="this.form.controls['email'].hasError('required')">
+            Please enter your email!
+          </mat-error>
+
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password" minlength="6" placeholder="Your password">
+            
+            <mat-error *ngIf="this.form.controls['password'].hasError('required')">
+              Please enter your password!
+            </mat-error>
+
+            <mat-error *ngIf="this.form.controls['password'].hasError('minlength')">
+              Password must be at least 6 characters long!
+            </mat-error>
+
+          </mat-form-field>
+        </div>
+      
+        <div class="button"><button type="submit" [disabled]="!form.valid" mat-raised-button color="accent">Sign In</button></div>
+        <div class="button"><p class="acc">Dont have an account?</p></div>
+        <p class="button" *ngIf="add">You are add new user!</p>
+        <p class="error">{{message}}</p>    
+        <div class="button"><button type="button" [disabled]="!form.valid" (click)="signup()" mat-raised-button color="warn">Sign Up</button></div>
+        
+      </form>
+      
+      <div class="button"><button type="button" *ngIf="authFire.isLoggedIn()" mat-raised-button color="primary" (click)="signout()">SignOut</button></div>
+      
+    </mat-card>
+    
