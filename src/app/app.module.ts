@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 import { AngularFireModule } from '@angular/fire';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +36,8 @@ import { NewCComponent } from './new-c/new-c.component';
     MatInputModule,
     MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase), //firebase settings
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

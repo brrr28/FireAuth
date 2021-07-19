@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+  }
+
+.slider {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+.top_slider {
+    display: flex;
+    justify-content: center;
+}
