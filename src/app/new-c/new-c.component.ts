@@ -40,6 +40,6 @@ export class NewCComponent{
   }
 
   getRate(): void {
-    alert('thanks for rate me!');
+    alert('thanks for rate us!');
   }
 }

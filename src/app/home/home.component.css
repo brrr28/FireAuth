@@ -4,6 +4,12 @@
     margin-top: 10px;
 }
 
+.input-box-name {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 .button {
     display: flex;
     align-items: center;
@@ -12,7 +18,8 @@
 }
 
 .container {
-    margin:0px 30% 0px 30% ;
+    margin:0px 30% 0px 30%;
+    margin-top: 100px;
 }
 
 .error {
